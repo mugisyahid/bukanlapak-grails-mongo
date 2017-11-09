@@ -1,4 +1,4 @@
-package dummy
+package com.ligarisma
 
 class BootStrap {
 

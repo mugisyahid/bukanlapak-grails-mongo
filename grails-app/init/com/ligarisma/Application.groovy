@@ -1,4 +1,4 @@
-package dummy
+package com.ligarisma
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
