@@ -13,12 +13,17 @@ appender('STDOUT', ConsoleAppender) {
     encoder(PatternLayoutEncoder) {
         charset = Charset.forName('UTF-8')
 
-        pattern =
-                '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} ' + // Date
-                        '%clr(%5p) ' + // Log level
-                        '%clr(---){faint} %clr([%15.15t]){faint} ' + // Thread
-                        '%clr(%-40.40logger{39}){cyan} %clr(:){faint} ' + // Logger
-                        '%m%n%wex' // Message
+        pattern = new StringBuilder()
+                .append('%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} ')        // Date
+                .append('%clr(%5p) ')                                       // Log level
+                .append('%clr(---){faint} %clr([%5.5t]){faint} ')           // Thread
+                .append('%clr(%-25.25logger{24}){cyan} %clr(:){faint} ')    // Logger
+//                '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} ' + // Date
+//                        '%clr(%5p) ' + // Log level
+//                        '%clr(---){faint} %clr([%15.15t]){faint} ' + // Thread
+//                        '%clr(%-40.40logger{39}){cyan} %clr(:){faint} ' + // Logger
+//                        '%m%n%wex' // Message
+//
     }
 }
 
